@@ -1,0 +1,26 @@
+EduXplore Ad Helper - tự xem quảng cáo thưởng game El Dorado trên BlueStacks
+==========================================================================
+
+Cài đặt (1 lần)
+1. Giải nén cả thư mục này ra máy (không chạy trực tiếp trong file zip).
+2. Mở BlueStacks -> Cài đặt -> Nâng cao -> bật "Android Debug Bridge (ADB)".
+3. Mở game El Dorado, vào tới màn hình chính (đã đăng nhập tài khoản).
+Không cần cài Python, adb hay phần mềm gì thêm (adb đã kèm trong thư mục adb\).
+
+Sử dụng
+1. Chạy EduXploreAdHelper.exe.
+2. Tool tự kết nối adb và đọc danh sách hạng mục + hạn mức hôm nay từ game.
+   Nếu không thấy: bấm "Kết nối / Tìm" (thử các cổng BlueStacks), rồi "Làm mới hạn mức".
+3. Tick mục cần xem, chỉnh "số lượt" (mặc định = số lượt còn lại trong ngày), bấm "Bắt đầu".
+4. Tool tự mở đúng màn hình (Shop, Sự kiện...), cuộn tìm nút, xem và đóng quảng cáo.
+   Mọi bước hiện trong khung Nhật ký, đồng thời lưu ở thư mục logs\.
+5. "Dừng" để ngắt (có hiệu lực sau thao tác hiện tại; nếu đang giữa quảng cáo thì tự đóng quảng cáo đó).
+
+Lưu ý
+- Đừng thao tác trong BlueStacks khi tool đang chạy (chuột chạm sẽ lẫn với tool).
+- Nếu có popup che màn hình (thông báo, sự kiện) tool sẽ báo "không vào được..." -> đóng popup rồi bấm Bắt đầu lại.
+- Đổi tài khoản trong game xong hãy bấm "Làm mới hạn mức".
+- Mục ghi "chưa hỗ trợ điều hướng" có hạn mức trong game nhưng tool chưa biết đường tới (sẽ bổ sung).
+- Thư mục library\ là "kinh nghiệm" quảng cáo tool học được (cách đóng từng loại). Gửi thư mục này
+  về để gộp cho các máy khác.
+- Tài khoản/mật khẩu không bao giờ được tool đọc hay nhập.

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Bản phát hành{% endblock %}
+{% block content %}
+<h2>Bản phát hành</h2>
+<table>
+<tr><th>Phiên bản</th><th>Kênh</th><th>Link tải</th><th>Bắt buộc cập nhật</th><th>Phát hành lúc</th></tr>
+{% for r in releases %}
+<tr>
+  <td>{{ r.version }}</td><td>{{ r.channel }}</td>
+  <td><a href="{{ r.download_url }}">tải</a></td>
+  <td>{{ "có" if r.force_update else "" }}</td>
+  <td>{{ r.published_at|ts }}</td>
+</tr>
+{% else %}
+<tr><td colspan="5" class="empty">Chưa có bản nào</td></tr>
+{% endfor %}
+</table>
+
+<h3>Thêm bản mới</h3>
+<form method="post" action="/admin/releases/new" class="card narrow">
+  <label>Phiên bản (vd 1.2.0)</label><input name="version" required>
+  <label>Kênh</label>
+  <select name="channel"><option value="stable">stable</option><option value="beta">beta</option></select>
+  <label>Link tải (.zip)</label><input name="download_url" required>
+  <label>SHA256 (tuỳ chọn)</label><input name="sha256">
+  <label>Ghi chú</label><textarea name="notes" rows="3"></textarea>
+  <label class="checkbox"><input type="checkbox" name="force_update" value="true"> Bắt buộc cập nhật</label>
+  <button type="submit">Thêm</button>
+</form>
+{% endblock %}

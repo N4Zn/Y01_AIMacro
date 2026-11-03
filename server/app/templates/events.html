@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Nhật ký{% endblock %}
+{% block content %}
+<h2>Nhật ký (200 gần nhất)</h2>
+<table>
+<tr><th>Thời gian</th><th>Người dùng</th><th>Loại</th><th>Dữ liệu</th></tr>
+{% for e in events %}
+<tr class="{{ 'warn-row' if e.type=='error' else '' }}">
+  <td>{{ e.ts|ts }}</td>
+  <td>{{ users.get(e.user_id, e.user_id) }}</td>
+  <td>{{ e.type }}</td>
+  <td class="mono small">{{ e.payload }}</td>
+</tr>
+{% else %}
+<tr><td colspan="4" class="empty">Chưa có sự kiện nào</td></tr>
+{% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Thư viện quảng cáo{% endblock %}
+{% block content %}
+<h2>Thư viện công thức đóng quảng cáo ({{ recipes|length }} hiển thị)</h2>
+<p class="hint">Gộp từ mọi máy đã đồng bộ. Xem thêm: NOTES.md mục "Thư viện kinh nghiệm quảng cáo".</p>
+<table>
+<tr><th>Activity</th><th>Loại nút</th><th>Vị trí</th><th>Số lần gặp</th><th>Thời gian đóng (s)</th><th>Cập nhật</th></tr>
+{% for r in recipes %}
+<tr>
+  <td class="mono small">{{ r.activity }}</td>
+  <td>{{ r.kind }}</td>
+  <td>({{ r.x }}, {{ r.y }})</td>
+  <td>{{ r.count }}</td>
+  <td>{{ "%.0f"|format(r.sec_min) }}–{{ "%.0f"|format(r.sec_max) }}</td>
+  <td>{{ r.updated_at|ts }}</td>
+</tr>
+{% else %}
+<tr><td colspan="6" class="empty">Thư viện trống — chưa có máy nào đồng bộ lên</td></tr>
+{% endfor %}
+</table>
+{% endblock %}

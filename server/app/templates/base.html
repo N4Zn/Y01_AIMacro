@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}EduXplore Ad Helper{% endblock %} — Quản trị</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <div class="brand">EduXplore Ad Helper <span>Quản trị</span></div>
+  {% if request.session.get("admin") %}
+  <nav>
+    <a href="/admin/">Tổng quan</a>
+    <a href="/admin/users">Người dùng</a>
+    <a href="/admin/sessions">Phiên đang chạy</a>
+    <a href="/admin/events">Nhật ký</a>
+    <a href="/admin/library">Thư viện</a>
+    <a href="/admin/releases">Bản phát hành</a>
+    <form method="post" action="/admin/logout" class="inline"><button type="submit" class="link">Đăng xuất</button></form>
+  </nav>
+  {% endif %}
+</header>
+<main>
+{% block content %}{% endblock %}
+</main>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Phiên đang chạy{% endblock %}
+{% block content %}
+<h2>Phiên đang đăng nhập</h2>
+<p class="hint">"Đang sống" = còn nhịp tim trong {{ timeout }}s gần nhất. Mỗi tài khoản license chỉ đăng nhập được 1 máy tại 1 thời điểm (xem SERVER_DESIGN.md mục 4).</p>
+<table>
+<tr><th>Người dùng</th><th>Máy (rút gọn)</th><th>Bắt đầu</th><th>Nhịp tim gần nhất</th><th>Trạng thái</th><th></th></tr>
+{% for s in sessions %}
+<tr>
+  <td>{{ users.get(s.user_id, s.user_id) }}</td>
+  <td class="mono small">{{ (s.device_fingerprint or "-")[:12] }}</td>
+  <td>{{ s.started_at|ts }}</td>
+  <td>{{ s.last_heartbeat|ts }}</td>
+  <td>{% if (now - s.last_heartbeat) < timeout %}<span class="ok">đang sống</span>{% else %}<span class="warn">đã chết</span>{% endif %}</td>
+  <td><form method="post" action="/admin/sessions/{{ s.id }}/kick" class="inline"><button type="submit" class="small">Ngắt</button></form></td>
+</tr>
+{% else %}
+<tr><td colspan="6" class="empty">Không có phiên nào</td></tr>
+{% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,7 @@
+﻿{
+  "serial": "127.0.0.1:5555",
+  "game_package": "busidol.mobile.eldorado",
+  "min_watch_sec": 3,
+  "trigger_xy": null,
+  "debug": false
+}

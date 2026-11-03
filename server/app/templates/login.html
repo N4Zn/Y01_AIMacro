@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Đăng nhập quản trị{% endblock %}
+{% block content %}
+<div class="card narrow center">
+  <h2>Đăng nhập quản trị</h2>
+  {% if error %}<p class="error">{{ error }}</p>{% endif %}
+  <form method="post" action="/admin/login">
+    <label>Mật khẩu quản trị</label>
+    <input type="password" name="password" autofocus>
+    <button type="submit">Vào</button>
+  </form>
+</div>
+{% endblock %}

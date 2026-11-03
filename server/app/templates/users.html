@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Người dùng{% endblock %}
+{% block content %}
+<h2>Người dùng ({{ users|length }})</h2>
+<table>
+<tr><th>Email</th><th>Gói</th><th>Trạng thái</th><th>Tạo lúc</th><th></th></tr>
+{% for u in users %}
+<tr>
+  <td>{{ u.email }}</td>
+  <td>
+    <form method="post" action="/admin/users/{{ u.id }}/plan" class="inline">
+      <select name="plan" onchange="this.form.submit()">
+        <option value="free" {{ "selected" if u.plan=="free" else "" }}>free</option>
+        <option value="pro" {{ "selected" if u.plan=="pro" else "" }}>pro</option>
+      </select>
+    </form>
+  </td>
+  <td>{{ "hoạt động" if u.is_active else "đã khoá" }}</td>
+  <td>{{ u.created_at|ts }}</td>
+  <td>
+    <form method="post" action="/admin/users/{{ u.id }}/toggle_active" class="inline">
+      <button type="submit" class="small">{{ "Khoá" if u.is_active else "Mở khoá" }}</button>
+    </form>
+  </td>
+</tr>
+{% else %}
+<tr><td colspan="5" class="empty">Chưa có người dùng — đăng ký qua POST /auth/register</td></tr>
+{% endfor %}
+</table>
+{% endblock %}

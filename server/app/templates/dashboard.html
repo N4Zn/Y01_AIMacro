@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Tổng quan{% endblock %}
+{% block content %}
+<h2>Tổng quan</h2>
+<div class="stat-grid">
+  <div class="stat"><div class="num">{{ stats.users }}</div><div class="label">Người dùng</div></div>
+  <div class="stat"><div class="num">{{ stats.pro }}</div><div class="label">Gói Pro</div></div>
+  <div class="stat"><div class="num">{{ stats.active_sessions }}</div><div class="label">Đang chạy</div></div>
+  <div class="stat"><div class="num">{{ stats.events_today }}</div><div class="label">Sự kiện hôm nay</div></div>
+  <div class="stat {{ 'warn' if stats.errors_today else '' }}"><div class="num">{{ stats.errors_today }}</div><div class="label">Lỗi hôm nay</div></div>
+  <div class="stat"><div class="num">{{ stats.recipes }}</div><div class="label">Công thức quảng cáo</div></div>
+</div>
+<h3>Lỗi gần đây</h3>
+<table>
+<tr><th>Thời gian</th><th>Người dùng</th><th>Nội dung</th></tr>
+{% for e in errors %}
+<tr><td>{{ e.ts|ts }}</td><td class="mono">{{ e.user_id }}</td><td class="mono small">{{ e.payload }}</td></tr>
+{% else %}
+<tr><td colspan="3" class="empty">Chưa có lỗi nào</td></tr>
+{% endfor %}
+</table>
+{% endblock %}

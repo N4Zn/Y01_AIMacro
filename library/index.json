@@ -1,0 +1,118 @@
+{
+ "recipes": {
+  "com.google.android.gms.ads.AdActivity|x|38|1": {
+   "activity": "com.google.android.gms.ads.AdActivity",
+   "count": 2,
+   "crop": "crops/com_google_android_gms_ads_AdActivity_x_38_1.png",
+   "first_seen": "2026-11-03",
+   "kind": "x",
+   "last_seen": "2026-11-03",
+   "samples": [
+    {
+     "file": "ads/com_google_android_gms_ads_AdActivity_x_38_1_33303038.jpg",
+     "hash": "3330303838383032"
+    },
+    {
+     "file": "ads/com_google_android_gms_ads_AdActivity_x_38_1_3f2d671c.jpg",
+     "hash": "3f2d671c3c3c3c7c"
+    }
+   ],
+   "sec_max": 34.4,
+   "sec_min": 22.9,
+   "sec_sum": 57.3,
+   "x": 1547,
+   "y": 53
+  },
+  "com.google.android.gms.ads.AdActivity|x|39|1": {
+   "activity": "com.google.android.gms.ads.AdActivity",
+   "count": 1,
+   "crop": "crops/com_google_android_gms_ads_AdActivity_x_39_1.png",
+   "first_seen": "2026-11-03",
+   "kind": "x",
+   "last_seen": "2026-11-03",
+   "samples": [
+    {
+     "file": "ads/com_google_android_gms_ads_AdActivity_x_39_1_1785c591.jpg",
+     "hash": "1785c59191899414"
+    }
+   ],
+   "sec_max": 24.2,
+   "sec_min": 24.2,
+   "sec_sum": 24.2,
+   "x": 1569,
+   "y": 40
+  },
+  "com.unity3d.ads.adplayer.FullScreenWebViewDisplay|skip|1|1": {
+   "activity": "com.unity3d.ads.adplayer.FullScreenWebViewDisplay",
+   "count": 7,
+   "crop": "crops/com_unity3d_ads_adplayer_FullScreenWebViewDisplay_skip_1_1.png",
+   "first_seen": "2026-11-03",
+   "kind": "skip",
+   "last_seen": "2026-11-03",
+   "samples": [
+    {
+     "file": "ads/com_unity3d_ads_adplayer_FullScreenWebViewDisplay_skip_1_1_20202020.jpg",
+     "hash": "2020202030203232"
+    },
+    {
+     "file": "ads/com_unity3d_ads_adplayer_FullScreenWebViewDisplay_skip_1_1_b28eb271.jpg",
+     "hash": "b28eb271bab2b2b2"
+    },
+    {
+     "file": "ads/com_unity3d_ads_adplayer_FullScreenWebViewDisplay_skip_1_1_30303830.jpg",
+     "hash": "3030383038383a33"
+    },
+    {
+     "file": "ads/com_unity3d_ads_adplayer_FullScreenWebViewDisplay_skip_1_1_48d2f0e8.jpg",
+     "hash": "48d2f0e8c0746a33"
+    },
+    {
+     "file": "ads/com_unity3d_ads_adplayer_FullScreenWebViewDisplay_skip_1_1_e675c9f2.jpg",
+     "hash": "e675c9f27a7121ed"
+    }
+   ],
+   "sec_max": 83.2,
+   "sec_min": 9.2,
+   "sec_sum": 262.5,
+   "x": 50,
+   "y": 71
+  },
+  "com.unity3d.ads.adplayer.FullScreenWebViewDisplay|x|38|1": {
+   "activity": "com.unity3d.ads.adplayer.FullScreenWebViewDisplay",
+   "count": 12,
+   "crop": "crops/com_unity3d_ads_adplayer_FullScreenWebViewDisplay_x_38_1.png",
+   "first_seen": "2026-11-03",
+   "kind": "x",
+   "last_seen": "2026-11-03",
+   "samples": [
+    {
+     "file": "ads/com_unity3d_ads_adplayer_FullScreenWebViewDisplay_x_38_1_f5f2f179.jpg",
+     "hash": "f5f2f1793150f03c"
+    },
+    {
+     "file": "ads/com_unity3d_ads_adplayer_FullScreenWebViewDisplay_x_38_1_79585878.jpg",
+     "hash": "7958587858787060"
+    },
+    {
+     "file": "ads/com_unity3d_ads_adplayer_FullScreenWebViewDisplay_x_38_1_38387e58.jpg",
+     "hash": "38387e585c397978"
+    },
+    {
+     "file": "ads/com_unity3d_ads_adplayer_FullScreenWebViewDisplay_x_38_1_78585f78.jpg",
+     "hash": "78585f783c713938"
+    },
+    {
+     "file": "ads/com_unity3d_ads_adplayer_FullScreenWebViewDisplay_x_38_1_38787928.jpg",
+     "hash": "387879282cb99918"
+    }
+   ],
+   "sec_max": 63.9,
+   "sec_min": 18.8,
+   "sec_sum": 434.9,
+   "x": 1550,
+   "y": 67
+  }
+ },
+ "unresolved": [],
+ "version": 1
+}

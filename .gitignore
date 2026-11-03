@@ -1,0 +1,20 @@
+debug/
+__pycache__/
+
+build/
+dist/
+logs/
+
+server/data/
+server/__pycache__/
+server/app/__pycache__/
+server/app/routers/__pycache__/
+
+# riêng từng máy / bí mật / mẫu lớn
+auth.json
+last_login.json
+last_stage_choice.json
+samples/
+debug/
+*.zip
+server/data/
